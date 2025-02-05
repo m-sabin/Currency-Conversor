@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_400"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Currency Conversor"
+        android:textColor="@color/primary_900"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_classification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Converta moedas em tempo real e acompanhe taxas !"
+        android:textColor="@color/primary_900"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_linear"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_classification"
+        tools:layout_editor_absoluteX="8dp">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="35dp"
+        android:text="Amount"
+        android:textColor="@color/segundary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_parent"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_til"
+        app:cursorColor="@color/primary_900"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linear_one_spinner">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1000.00"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_one_spinner"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_amount"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_amount">
+
+        <Spinner
+            android:id="@+id/spinner_moedas"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/primary_900"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_amount"
+            app:layout_constraintTop_toTopOf="@+id/til_parent" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_btnSwap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/til_parent">
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <ImageButton
+            android:id="@+id/btn_swap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn_swap"
+            android:elevation="6dp"
+            android:src="@drawable/ic_swap" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_title_convertMoeda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="35dp"
+        android:text="Converted Amount"
+        android:textColor="@color/segundary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_btnSwap" />
+
+    <LinearLayout
+        android:id="@+id/linear_spinner_convert"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_convertMoeda"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_convertMoeda">
+
+        <Spinner
+            android:id="@+id/spinner_moedas_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/primary_900"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_convertMoeda" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_parent_convert"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_til"
+        app:cursorColor="@color/primary_900"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linear_spinner_convert">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_convert_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1000.00"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:gravity="end"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_title_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text="Indicative Exchange Rate"
+        android:textColor="@color/segundary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/tv_exchange_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="1 BRL = "
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_exchange" />
+
+    <TextView
+        android:id="@+id/tv_exchange_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.7367 USD"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tv_exchange_one"
+        app:layout_constraintTop_toTopOf="@+id/tv_exchange_one" />
+
+    <Button
+        android:id="@+id/btn_clean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="@color/primary_900"
+        android:padding="12dp"
+        android:text="CLEAN"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_two" />
+</androidx.constraintlayout.widget.ConstraintLayout>
