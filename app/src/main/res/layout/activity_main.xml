@@ -74,7 +74,7 @@
             android:id="@+id/tie_amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="1000.00"
+            android:hint="100.00"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:gravity="end"
@@ -124,6 +124,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
+            android:contentDescription="Trocar moedas"
             android:background="@drawable/bg_btn_swap"
             android:elevation="6dp"
             android:src="@drawable/ic_swap" />
@@ -172,7 +173,7 @@
             android:id="@+id/tie_convert_amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="1000.00"
+            android:hint="579.00"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:textColor="@color/black"
@@ -195,29 +196,19 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <TextView
-        android:id="@+id/tv_exchange_one"
+        android:id="@+id/tv_indicativeRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
-        android:text="1 BRL = "
+        tools:text="1 USD = 5.76 BRL"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_title_exchange" />
 
-    <TextView
-        android:id="@+id/tv_exchange_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0.7367 USD"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/tv_exchange_one"
-        app:layout_constraintTop_toTopOf="@+id/tv_exchange_one" />
 
     <Button
         android:id="@+id/btn_clean"
@@ -232,5 +223,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_two" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_indicativeRate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
