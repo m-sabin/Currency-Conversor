@@ -109,19 +109,12 @@ class MainActivity : AppCompatActivity() {
             updateIndicativeRate()
         }
         valueSpinner.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                convertCurrency()
-            }
+            override fun afterTextChanged(s: Editable?) {}
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s.isNullOrEmpty()) {
-                    valueSpinnerConvert.text?.clear()
-                } else {
-                    convertCurrency()
-                }
-            }
+                convertCurrency() }
         })
 
         val currencyChangeListener = object : AdapterView.OnItemSelectedListener {
