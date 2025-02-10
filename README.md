@@ -24,6 +24,10 @@ FindViewById → Para recuperação e manipulação dos componentes do interface
 TextWatcher → Para atualizar automaticamente os valores convertidos enquanto o usuário digita.
 
 Spinner com Adapter e ArrayAdapter → Para selecionar moedas de forma dinâmica.
+
+ConstraintLayout -> TextView, Button, TextInputEditText, FrameLayout
+
+Ripple nos Botões 
 ___
 🎨 Funcionalidades
 
