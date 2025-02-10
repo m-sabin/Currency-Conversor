@@ -1,13 +1,13 @@
-🏦 Currency Conversor
+🏦 SwiftCurrency
 ___
 
 📌 Sobre o projeto
-O Currency Conversor é um aplicativo Android desenvolvido em Kotlin que permite converter valores entre diferentes moedas de forma rápida e intuitiva. Ele foi projetado para oferecer uma experiência simples e eficiente para usuários que precisam realizar conversões monetárias no dia a dia.
+O SwiftCurrency é um aplicativo Android desenvolvido em Kotlin que permite converter valores entre diferentes moedas de forma rápida e intuitiva. Ele foi projetado para oferecer uma experiência simples e eficiente para usuários que precisam realizar conversões monetárias no dia a dia.
 ___
 
 📸 *Screenshots*
 
-<img src="https://github.com/user-attachments/assets/6e5b7a0f-509a-456d-9230-9e537ca49498" width=260/> 
+<img src="https://github.com/user-attachments/assets/52dfe040-33f7-4b69-92b6-45a1d7e19b03" width=260/> 
 
 __
 
