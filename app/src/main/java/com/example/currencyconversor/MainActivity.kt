@@ -109,12 +109,15 @@ class MainActivity : AppCompatActivity() {
             updateIndicativeRate()
         }
         valueSpinner.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+
+            }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                convertCurrency() }
+                convertCurrency()
+            }
         })
 
         val currencyChangeListener = object : AdapterView.OnItemSelectedListener {
@@ -134,14 +137,11 @@ class MainActivity : AppCompatActivity() {
         spinnerConvert.onItemSelectedListener = currencyChangeListener
 
         btnSwap.setOnClickListener {
-            val swapping = valueSpinner.text
-            valueSpinner.text = valueSpinnerConvert.text
-            valueSpinnerConvert.text = swapping
+            val tempCurrencyPosition = spinner.selectedItemPosition
 
-            val moedasPosition = spinner.selectedItemPosition
             spinner.setSelection(spinnerConvert.selectedItemPosition)
-            spinnerConvert.setSelection(moedasPosition)
-
+            spinnerConvert.setSelection(tempCurrencyPosition)
+            convertCurrency()
         }
 
         btnClean.setOnClickListener {
